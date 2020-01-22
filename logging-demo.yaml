@@ -11,8 +11,10 @@ spec:
       nodeCount: 1
       resources:
         limits:
-          memory: 2Gi
-      storage: {}
+          memory: 4Gi
+      storage:
+        storageClassName: "gp2"
+        size: "10G"
       redundancyPolicy: "ZeroRedundancy"
   visualization:
     type: "kibana"
@@ -31,7 +33,7 @@ spec:
       resources:
         limits:
           memory: 200Mi
-      schedule: "*/10 * * * *"
+      schedule: "*/30 * * * *"
   collection:
     logs:
       type: "fluentd"
