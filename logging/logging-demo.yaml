@@ -12,9 +12,7 @@ spec:
       resources:
         limits:
           memory: 4Gi
-      storage:
-        storageClassName: "gp2"
-        size: "10G"
+      storage: {}
       redundancyPolicy: "ZeroRedundancy"
   visualization:
     type: "kibana"
