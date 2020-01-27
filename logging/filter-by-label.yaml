@@ -1,0 +1,7 @@
+      <filter kubernetes.**>
+        @type grep
+        <regexp>
+            key $.kubernetes.labels.fluentd
+            pattern true
+        </regexp>
+      </filter>
